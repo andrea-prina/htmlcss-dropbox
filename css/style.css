@@ -5,3 +5,142 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.flex {
+    display: flex;
+}
+
+
+/* TODO Fare container più piccolo */
+.container-large {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* TODO Da rimuovere */
+    border: solid 2px purple;
+    height: 400px;
+}
+
+.container-small {
+    width: 60%;
+    max-width: 800px;
+    margin: 0 auto;
+    /* TODO Da rimuovere */
+    border: solid 2px purple;
+}
+
+
+/* To be place inside a container-large or container-small to partition them */
+.sub-container-large {
+    width: 60%;
+    /* TODO Da rimuovere */
+    border: solid 2px red;
+    height: 400px;
+}
+
+.sub-container-small {
+    width: 40%;
+    /* TODO Da rimuovere */
+    border: solid 2px blue;
+    height: 400px;
+}
+
+.sub-container-full {
+    width: 100%;
+    /* TODO Da rimuovere */
+    border: solid 2px green;
+}
+
+
+
+
+/* HEADER */
+
+header {
+    height: 60px;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #fff;
+
+    /* TODO Da rimuovere */
+    border: solid 2px grey;
+}
+
+
+
+/* MAIN */
+
+main {
+    margin-top: 60px;
+}
+
+section {
+ 
+    padding: 80px 0px 0px 0px;
+    /* TODO Da rimuovere */
+    border: solid 2px black;
+
+}
+
+.bcg-colour-1 {
+    background-color: #b8d4e4;
+}
+
+/* TODO Capire come gestire il padding/margin top variabile */
+.no-padding {
+
+    padding: 0;
+}
+
+.card {
+    width: calc((100% - 10px * 2 * 3) / 3);
+    /* TODO Da rimuovere */
+    border: dashed 1px aquamarine;
+    
+}
+
+/* TODO Da rimuovere */
+#features .card {
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+#features .sub-container-full {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.faq-element {
+    border-top: solid 1px grey;
+    display: flex;
+    /* TODO Da rimuovere */
+    height: 30%;
+}
+
+.faq-element:last-child {
+    border-bottom: solid 1px grey;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+}
+
+
+footer .sub-container-full{
+    justify-content: center;
+}
+
+footer ul {
+    margin: 20px
+}
+
+footer li {
+    color: white;
+}
