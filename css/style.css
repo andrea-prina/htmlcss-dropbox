@@ -13,12 +13,41 @@ body {
     font-size: 14px;
 }
 
+h1 {
+    font-size: 60px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+.spaced-title {
+    padding: 50px 0px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    margin: 20px 0px;
+}
+
+.full-img {
+    width: 100%;
+}
 
 .flex {
     display: flex;
 }
 
+.centered-element {
+    justify-content: center;
+    align-items: center;
+}
 
+/* CONTAINER */
 /* TODO Fare container più piccolo */
 .container-large {
     width: 80%;
@@ -26,7 +55,6 @@ body {
     margin: 0 auto;
     /* TODO Da rimuovere */
     border: solid 2px purple;
-    height: 400px;
 }
 
 .container-small {
@@ -43,14 +71,13 @@ body {
     width: 60%;
     /* TODO Da rimuovere */
     border: solid 2px red;
-    height: 400px;
 }
 
 .sub-container-small {
     width: 40%;
+    padding: 40px;
     /* TODO Da rimuovere */
     border: solid 2px blue;
-    height: 400px;
 }
 
 .sub-container-full {
@@ -63,13 +90,27 @@ ul {
     list-style: none;
 }
 
-.btn-1 {
-    background-color: #0061FF;
-    color: white;
+
+/* BOTTONI LINK*/
+.btn {
     padding: 5px 15px;
     text-decoration: none;
-
 }
+
+.btn-style1 {
+    background-color: #0061FF;
+    color: white;
+}
+
+.btn-style2 {
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.btn-style3 {
+    background-color: #fff;
+}
+
 
 /* HEADER */
 
@@ -120,7 +161,7 @@ main {
 
 section {
  
-    padding: 80px 0px 0px 0px;
+    padding: 90px 0px 0px 0px;
     /* TODO Da rimuovere */
     border: solid 2px black;
 
@@ -137,22 +178,43 @@ section {
 }
 
 .card {
-    width: calc((100% - 10px * 2 * 3) / 3);
+    width: calc((100% - 15px * 2 * 3) / 3);
     /* TODO Da rimuovere */
     border: dashed 1px aquamarine;
     
 }
 
+/* JUMBOTRON SECTION */
+
+/* TODO Cercare una soluzione che non comporti l'utilizzo del position? */
+.jumbo {
+    max-width: 100%;
+    position: relative;
+    bottom: -50px;
+    right: -50px;
+}
+
+
+
+/* BUSINESS FEATURES */
+
+
 /* TODO Da rimuovere */
 #features .card {
-    height: 400px;
-    margin-bottom: 10px;
+    margin: 30px 0px;
 }
 
 #features .sub-container-full {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+
+/* DROPBOX PARTERNS */
+.partner {
+    background-image: url(../img/partner.png);
+}
+
 
 
 .faq-element {
