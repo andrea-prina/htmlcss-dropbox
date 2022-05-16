@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
 /* RESET & COMMONS */
 
 * {
@@ -5,6 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
 
 .flex {
     display: flex;
@@ -51,14 +59,24 @@
     border: solid 2px green;
 }
 
+ul {
+    list-style: none;
+}
 
+.btn-1 {
+    background-color: #0061FF;
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
 
+}
 
 /* HEADER */
 
 header {
     height: 60px;
     display: flex;
+    justify-content: space-between;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -68,6 +86,29 @@ header {
     /* TODO Da rimuovere */
     border: solid 2px grey;
 }
+
+.nav-bar {
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    display: inline-block;
+    margin-right: 15px;
+
+}
+
+.nav-bar li {
+    float: left; /* Same as giving display:flex property to the nav-links ul */
+    padding: 5px 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+
 
 
 
