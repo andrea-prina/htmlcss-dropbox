@@ -16,18 +16,22 @@ body {
 /* DIFFERENT WIDTHS */
 .w-100 {
     width: 100%;
+    border: 1px solid green;
 }
 
 .w-80 {
     width: 80%;
+    border: 1px solid red;
 }
 
 .w-60 {
     width: 60%;
+    border: 1px solid blue;
 }
 
 .w-40 {
     width: 40%;
+    border: 1px solid purple;
 }
 
 .w-20 {
@@ -77,7 +81,30 @@ body {
     background-color: #f5f5f5;
 }
 
-/* COMMONS */
+
+/* OTHER GENERIC CLASSES */
+
+.c-padding {
+    padding: 40px;
+}
+
+.flex-div {
+    display: flex;
+}
+
+.wrap-between {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.centered-element {
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* TAGS FORMATTING */
 h1 {
     font-size: 60px;
     font-weight: 900;
@@ -86,10 +113,6 @@ h1 {
 h2 {
     font-size: 32px;
     padding: 30px 0px;
-}
-
-.spaced-title {
-    padding: 50px 0px;
 }
 
 h3 {
@@ -109,18 +132,6 @@ ul {
     list-style: none;
 }
 
-.full-img {
-    width: 100%;
-}
-
-.flex {
-    display: flex;
-}
-
-.centered-element {
-    justify-content: center;
-    align-items: center;
-}
 
 /* CONTAINER */
 /* TODO Fare container più piccolo */
@@ -128,21 +139,18 @@ ul {
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
-    /* TODO Da rimuovere */
-    border: solid 2px purple;
 }
 
 .container-small {
     width: 60%;
     max-width: 800px;
     margin: 0 auto;
-    /* TODO Da rimuovere */
-    border: solid 2px purple;
 }
-
 
 /* To be place inside a container-large or container-small to partition them */
 /* TODO Creare unica classe container con diverse classi di misura width anche per altro tipo img-full?? */
+
+
 .sub-container-large {
     width: 60%;
     /* TODO Da rimuovere */
@@ -287,20 +295,11 @@ section {
     margin: 30px 0px;
 }
 
-#features .sub-container-full {
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 
 /* BUSINESS CLIENTS */
 
 
 /* BANNER */
-
-.sub-container-third.flex {
-    flex-wrap: wrap;
-}
 
 .squared-element {
     width: calc((100vw / 3) / 2 - 5px);
@@ -364,14 +363,17 @@ section {
     display: block;
 }
 
+
+
 /* FOOTER */
 
 footer {
     background-color: black;
     color: white;
+    margin-top: 90px;
 }
 
-footer .sub-container-full{
+footer .w-100{
     justify-content: space-between;
     padding: 20px 0px;
 }
