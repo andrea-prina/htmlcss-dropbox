@@ -13,14 +13,13 @@ body {
 }
 
 /* DIFFERENT WIDTHS */
-/* TODO Rimuovere bordi */
+
 .w-100 {
     width: 100%;
 }
 
 .w-80 {
     width: 80%;
-    border: 1px solid red;
 }
 
 .w-75 {
@@ -29,12 +28,10 @@ body {
 
 .w-60 {
     width: 60%;
-    border: 1px solid blue;
 }
 
 .w-40 {
     width: 40%;
-    border: 1px solid purple;
 }
 
 .w-25 {
@@ -131,7 +128,7 @@ p {
 }
 
 hr {
-    width: 10%;
+    width: 10%; /* TODO Rimuovere e armnoizzare */
     margin: 40px 0px;
 }
 
@@ -154,28 +151,7 @@ ul {
     margin: 0 auto;
 }
 
-/* To be place inside a container-large or container-small to partition them */
 /* TODO Creare unica classe container con diverse classi di misura width anche per altro tipo img-full?? */
-
-
-.sub-container-large {
-    width: 60%;
-    /* TODO Da rimuovere */
-    border: solid 2px red;
-}
-
-.sub-container-small {
-    width: 40%;
-    padding: 40px;
-    /* TODO Da rimuovere */
-    border: solid 2px blue;
-}
-
-.sub-container-full {
-    width: 100%;
-    /* TODO Da rimuovere */
-    border: solid 2px green;
-}
 
 .sub-container-third {
     width: calc(100% / 3);
@@ -209,27 +185,26 @@ ul {
 }
 
 
+
 /* HEADER */
 
-/* TODO Risolvere senza z-index? */
 header {
     height: 60px;
     display: flex;
-    z-index: 1;
     justify-content: space-between;
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
+    z-index: 1;
+    padding: 0px 20px;
     background-color: #fff;
-
-    /* TODO Da rimuovere */
-    border: solid 2px grey;
+    border-bottom: solid 2px rgb(202, 202, 202);
 }
 
 .nav-bar {
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .logo {
@@ -238,9 +213,18 @@ header {
 
 }
 
+
+.nav-bar ul {
+    height: 100%;
+}
+
 .nav-bar li {
-    float: left; /* Same as giving display:flex property to the nav-links ul */
+    float: left; 
     padding: 5px 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
 }
 
 .nav-link {
@@ -249,6 +233,9 @@ header {
 }
 
 
+.nav-bar li:hover {
+    border-bottom: 1px solid black;
+}
 
 
 
@@ -261,8 +248,6 @@ main {
 section {
  
     padding: 90px 0px 0px 0px;
-    /* TODO Da rimuovere */
-    border: solid 2px black;
 
 }
 
@@ -286,6 +271,20 @@ section {
     position: relative;
     bottom: -50px;
     right: -50px;
+}
+
+.fa-arrow-down {
+    margin-top: 60px;
+    font-size: 36px;
+}
+
+.link-arrow > a {
+    text-decoration: none;
+    color: black;
+}
+
+#jumbotron p {
+    margin: 45px 0px;
 }
 
 
@@ -382,8 +381,8 @@ section {
 /* BANNER */
 
 .squared-element {
-    width: calc((100vw / 3) / 2 - 3.5px);
-    height: calc((100vw / 3) / 2 - 3.5px);
+    width: calc((100vw / 3) / 2 - 3px);
+    height: calc((100vw / 3) / 2 - 3px);
     justify-content: center;
     align-items: center;
 }
@@ -401,6 +400,9 @@ section {
 
 /* TRY DROPBOX BUSINESS */
 
+#try-dropbox > .container-small {
+    padding-bottom: 90px;
+}
 
 
 /* FREQUENTLY ASKED QUESTIONS */
