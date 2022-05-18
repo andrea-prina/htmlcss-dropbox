@@ -1,0 +1,28 @@
+#login h4 {
+    color: white;
+}
+
+.credential {
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+}
+
+#login .logo {
+    filter: brightness(0) invert(1);
+    margin-bottom: 100px;
+}
+
+#login .container-large {
+    border-radius: 10px;
+    text-align: center;
+    padding: 40px;
+}
+
+.user-inputs {
+    margin: 0 auto;
+    width: 40%;
+    max-width: 600px;
+    border: 1px solid white;
+    padding: 100px 50px;
+}
