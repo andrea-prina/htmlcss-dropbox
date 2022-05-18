@@ -250,7 +250,7 @@ header {
     color: black;
 }
 
-.nav-bar li:hover {
+.nav-item:hover {
     border-bottom: 1px solid black;
 }
 
@@ -501,6 +501,10 @@ footer li {
     padding: 5px;
 }
 
+footer li:hover {
+    opacity: 80%;
+}
+
 footer h3 {
     margin-bottom: 20px;
 }
@@ -513,3 +517,45 @@ footer .fa-angle-up {
     font-size: 8px;
     vertical-align: super;
 }
+
+
+
+
+
+/* BONUS: DROP DOWN MENU */
+
+.nav-bar li{
+    position: relative;
+}
+
+.drop-down {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    background-color: var(--element-color);
+    display: none;
+}
+
+.drop-down a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list:hover {
+    background-color: var(--element-color);
+    border-bottom: 1px solid white;
+}
+
+.nav-list:hover .nav-link {
+    color: white;
+    font-weight: 900;
+}
+
+.nav-list:hover .drop-down {
+    display: block;
+}
+
+.drop-choice:hover{
+    opacity: 80%;
+}
+
