@@ -12,8 +12,12 @@ body {
     font-size: 14px;
 }
 
-/* DIFFERENT WIDTHS */
+:root {
+    --main-bcg: #b8d4e4;
+    --element-color: #0061FF;  
+}
 
+/* DIFFERENT WIDTHS */
 .w-100 {
     width: 100%;
 }
@@ -26,12 +30,20 @@ body {
     width: 75%;
 }
 
+.w-70 {
+    width: 70%;
+}
+
 .w-60 {
     width: 60%;
 }
 
 .w-40 {
     width: 40%;
+}
+
+.w-30 {
+    width: 30%;
 }
 
 .w-25 {
@@ -46,11 +58,16 @@ body {
     width: 10%;
 }
 
+.w-third {
+    width: calc(100% / 3);
+    height: calc(100vw / 3);
+}
+
 
 
 /* DIFFERENT BACKGROUND COLORS */
 .bgc-1 {
-    background-color: #b8d4e4;
+    background-color: var(--main-bcg);
 }
 
 .bgc-2 {
@@ -86,8 +103,8 @@ body {
 }
 
 
-/* OTHER GENERIC CLASSES */
 
+/* OTHER GENERIC CLASSES */
 .c-padding {
     padding: 40px;
 }
@@ -128,7 +145,6 @@ p {
 }
 
 hr {
-    width: 10%; /* TODO Rimuovere e armnoizzare */
     margin: 40px 0px;
 }
 
@@ -137,8 +153,8 @@ ul {
 }
 
 
+
 /* CONTAINER */
-/* TODO Fare container più piccolo */
 .container-large {
     width: 80%;
     max-width: 1200px;
@@ -151,12 +167,6 @@ ul {
     margin: 0 auto;
 }
 
-/* TODO Creare unica classe container con diverse classi di misura width anche per altro tipo img-full?? */
-
-.sub-container-third {
-    width: calc(100% / 3);
-}
-
 
 
 /* BOTTONI LINK*/
@@ -164,7 +174,6 @@ ul {
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
 }
 
 .nav-btn {
@@ -172,8 +181,12 @@ ul {
 }
 
 .btn-style1 {
-    background-color: #0061FF;
+    background-color: var(--element-color);
     color: white;
+}
+
+.btn-style1:hover {
+    opacity: 80%;
 }
 
 .btn-style2 {
@@ -185,11 +198,17 @@ ul {
     background-color: #fff;
 }
 
+.btn-style2:hover, .btn-style3:hover {
+    background-color: rgb(248, 248, 248);
 
+}
+
+.inblock-btn {
+    display: inline-block;
+}
 
 
 /* HEADER */
-
 header {
     height: 60px;
     display: flex;
@@ -206,13 +225,11 @@ header {
 
 .nav-bar {
     align-items: center;
-    /* padding: 10px; */
 }
 
 .logo {
     display: inline-block;
     margin-right: 15px;
-
 }
 
 
@@ -226,14 +243,12 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-
 }
 
 .nav-link {
     text-decoration: none;
     color: black;
 }
-
 
 .nav-bar li:hover {
     border-bottom: 1px solid black;
@@ -242,31 +257,21 @@ header {
 
 
 /* MAIN */
-
 main {
     margin-top: 60px;
 }
 
 section {
- 
     padding: 90px 0px 0px 0px;
-
-}
-
-
-/* TODO Capire come gestire il padding/margin top variabile */
-.no-padding {
-
-    padding: 0;
 }
 
 .card {
-    width: calc((100% - 15px * 2 * 3) / 3);
-    
+    width: calc((100% - 15px * 2 * 3) / 3); 
 }
 
-/* JUMBOTRON SECTION */
 
+
+/* JUMBOTRON SECTION */
 /* TODO Cercare una soluzione che non comporti l'utilizzo del position? */
 .jumbo {
     max-width: 100%;
@@ -290,8 +295,8 @@ section {
 }
 
 
-/* PRICING */
 
+/* PRICING */
 .radio {
     margin-right: 20px;
     margin-bottom: 40px;
@@ -307,7 +312,7 @@ section {
 }
 
 .radiob:hover {
-    border: 4px solid #0061FF;
+    border: 4px solid var(--element-color);
 }
 
 
@@ -362,7 +367,7 @@ section {
 }
 
 .card-highlights .fa-check {
-    color: #0061FF;
+    color: var(--element-color);
 }
 
 .horizontal-card {
@@ -379,31 +384,25 @@ section {
 
 
 
-
-
 /* DROPBOX PARTERNS */
 .partner {
     background-image: url(../img/partner.png);
 }
 
 
+
 /* BUSINESS FEATURES */
 
-
-/* TODO Da rimuovere */
-#features .card {
-    margin: 30px 0px;
-}
 
 
 /* BUSINESS CLIENTS */
 
 
-/* BANNER */
 
+/* BANNER */
 .squared-element {
-    width: calc((100vw / 3) / 2 - 3px);
-    height: calc((100vw / 3) / 2 - 3px);
+    width: 50%;
+    height: 50%;
     justify-content: center;
     align-items: center;
 }
@@ -413,10 +412,20 @@ section {
     filter: invert(1); /* Invert color sample so black --> white */
 }
 
-/* TODO Quando restringo il testo deve essere coperto e andare in scroll */
 .central-ban {
+    height: calc(100vw / 3);
     padding: 40px;
+    overflow: auto;
 }
+
+.central-ban p {
+    overflow: hidden;
+}
+
+.squared-element:hover {
+    border: 10px solid rgba(255,255,255,0.50);
+}
+
 
 
 /* TRY DROPBOX BUSINESS */
@@ -426,20 +435,18 @@ section {
 }
 
 
+
 /* FREQUENTLY ASKED QUESTIONS */
 .faq-element {
     border-top: solid 1px grey;
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
-    /* TODO Da rimuovere */
-    height: 30%;
 }
 
 .faq-element:last-child {
     border-bottom: solid 1px grey;
 }
-
 
 .faq-title, .faq-open, .faq-close {
     font-weight: 900;
@@ -447,6 +454,7 @@ section {
 
 .faq-text {
     display: none;
+    margin-top: 20px;
 }
 
 .faq-close {
@@ -468,7 +476,6 @@ section {
 
 
 /* FOOTER */
-
 footer {
     background-color: black;
     color: white;
