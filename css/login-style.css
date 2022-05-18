@@ -26,3 +26,9 @@
     border: 1px solid white;
     padding: 100px 50px;
 }
+
+#login .btn {
+    width: 40%;
+    margin: 10px auto;
+
+}
