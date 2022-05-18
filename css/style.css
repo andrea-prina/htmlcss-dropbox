@@ -164,6 +164,7 @@ ul {
     padding: 10px 25px;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
 }
 
 .nav-btn {
@@ -183,6 +184,7 @@ ul {
 .btn-style3 {
     background-color: #fff;
 }
+
 
 
 
@@ -289,6 +291,25 @@ section {
 
 
 /* PRICING */
+
+.radio {
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+
+.radiob {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.radiob:hover {
+    border: 4px solid #0061FF;
+}
+
 
 /* TODO Gestire con custom property? */
 #pricing .card, #pricing .horizontal-card {
